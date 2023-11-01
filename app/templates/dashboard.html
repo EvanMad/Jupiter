@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page_container_v">
+    <div>
+        <img width=100 height=100 src="../static/icon.png">
+        <span style="font-size: 40;"> Altitude Inc Weather Simulator </span>
+    </div>
+    <div>
+        <span style="  position: relative; top:-45px; padding-left : 105; font-size: 20;"> Prototype Dashboard V0.1 </span>
+    </div>
+    <div>
+        <span style="  position: relative; top:-55px; padding-left : 105; font-size: 20;"> Click on any table entry to see simulation data</span> 
+    </div>
+    <!-- <button class="btn btn-primary">Refresh</button> -->
+    <table  style="position: relative; top:-25px;" class="table">
+        <thead>
+            <th scope="col">Date-Time</th>
+            <th scope="col">Temp</th>
+            <th scope="col">Precipitation</th>
+            <th scope="col">Pressure</th>
+            <th scope="col">Humidity</th>
+            <th scope="col">Wind Speed</th>
+            <th scope="col">Wind Dir</th>
+        </thead>
+        <tbody id="table-body">
+            {% for item in data %}
+            <tr id="entry-{{item.window_data.dt}}" class="entry" onclick="open_window({{item}})">
+                <td style="font-weight: bold;">{{item.window_data.string_dt}}</td>
+                <td>{{item.window_data.weather_data.temp}}°C</td>
+                <td>{{item.window_data.weather_data.precipitation}}%</td>
+                <td>{{item.window_data.weather_data.pressure}}</td>
+                <td>{{item.window_data.weather_data.humidity}}%</td>
+                <td>{{item.window_data.weather_data.wind_speed}}</td>
+                <td>{{item.window_data.weather_data.wind_deg}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- <div class="page_container_v">
+    <h1> Project Duster - Dashboard V0.1 </h1>
+    <div class="card_holder">
+        {% for item in data %}
+        <div onclick="open_window({{item}})" class="card container">
+            <div class="page_container_h">
+                <p>{{item.window_data.string_dt}}</p>
+                <p>{{item.window_data.weather_data.temp}}°C</p>
+                <p>{{item.window_data.weather_data.precipitation}}%</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div> -->
+<script src="../static/formatter.js"></script>
+<script>
+    var data = {{ data| tojson | safe}};
+
+    let times = data.map(a => a.window_data.sim_data.flightTime);
+    for (var i = 0; i < data.length; i++) {
+        var entry = data[i];
+        var rgb_colour = getColour(times, entry.window_data.sim_data.flightTime);
+        var entry_elem = document.getElementById("entry-"+entry.window_data.dt)
+        //console.log(entry_elem);
+        entry_elem.style.backgroundColor = rgb_colour;
+    };
+</script>
+<script src="../static/navigation.js"></script>
+{% endblock %}

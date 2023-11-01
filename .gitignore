@@ -1,0 +1,5 @@
+_venv
+OpenRocket-22.02.jar
+config.py
+__pycache__
+/app/__pycache__

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page_container_v">
+    <h1>Simulation @ {{data.string_dt}}</h1>
+    <table class="table">
+        <tr>
+          <th>Flight Time:</th>
+          <td>{{data.sim_data.flightTime|round(3)}}</td>
+        </tr>
+        <tr>
+          <th>Ground Hit Velocity:</th>
+          <td>{{data.sim_data.groundHitVelocity|round(3)}}</td>
+        </tr>
+        <tr>
+          <th>Max Acceleration:</th>
+          <td>{{data.sim_data.maxAcceleration|round(3)}}</td>
+        </tr>
+        <tr>
+            <th>Max Altitude:</th>
+            <td>{{data.sim_data.maxAltitude|round(3)}}</td>
+          </tr>
+          <tr>
+            <th>Max Velocity:</th>
+            <td>{{data.sim_data.maxVelocity|round(3)}}</td>
+          </tr>
+          <tr>
+            <th>Time To Apogee:</th>
+            <td>{{data.sim_data.timeToApogee|round(3)}}</td>
+          </tr>
+      </table>
+    <!-- <p> Flight Time : {{data.sim_data.flightTime|round(3)}}</p>
+    <p> Ground Hit Velocity : {{data.sim_data.groundHitVelocity|round(3)}}</p>
+    <p> Max Acceleration : {{data.sim_data.maxAcceleration|round(3)}}</p>
+    <p> Max Altitude : {{data.sim_data.maxAltitude|round(3)}}</p>
+    <p> Max Velocity : {{data.sim_data.maxVelocity|round(3)}}</p>
+    <p> Time To Apogee : {{data.sim_data.timeToApogee|round(3)}}</p> -->
+</div>
+<script src="../static/navigation.js"></script>
+{% endblock %}

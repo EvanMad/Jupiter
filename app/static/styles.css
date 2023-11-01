@@ -1,0 +1,97 @@
+/* .page_container_v {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding-top: 20px;
+    flex-grow: 1;
+    margin: 15px;
+  } */
+
+.page_container_v {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.page_container_h {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.instance {
+  border: 1px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+}
+
+ul#menu li {
+  display: inline;
+}
+
+
+ul#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ab2929
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  text-decoration: none;
+  background-color: #ab2929
+  color: rgb(0, 0, 0);
+}
+
+/* .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; 
+  height: 60px;
+} 
+*/
+
+.entry {
+  transition: background-color 0.3s;
+  border-style:groove; 
+  border-width: 2px;
+  position: relative;
+  top:-1px
+}
+
+.entry:hover {
+  /* background-color: transparent; */
+  /* background-color: rgb(224, 224, 224) !important; */
+  filter: brightness(70%) !important;
+}
+
+.card_holder {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card_container_v {
+  display: flex;
+  flex-direction: column;
+}
+
+.test {
+  color: aqua;
+}

@@ -1,0 +1,8 @@
+flask
+flask-wtf
+flask-babel
+coverage
+
+orhelper
+requests
+
