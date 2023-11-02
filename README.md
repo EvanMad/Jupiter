@@ -13,6 +13,11 @@ It gathers weather data from openweather API, and connect it to an OpenRocket si
 
 ## Building
 ```python3 -m venv venv```
+
 ```source /venv/bin/activate```
+
 ```pip install -r requirements.txt```
+
 ```python3 run.py```
+
+You will also need the latest version of OpenRocket in JAR form in the root directory. You can download that from here: https://openrocket.info/downloads.html?vers=22.02
