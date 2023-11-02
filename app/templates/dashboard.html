@@ -27,7 +27,7 @@
             <tr id="entry-{{item.window_data.dt}}" class="entry" onclick="open_window({{item}})">
                 <td style="font-weight: bold;">{{item.window_data.string_dt}}</td>
                 <td>{{item.window_data.weather_data.temp}}°C</td>
-                <td>{{item.window_data.weather_data.precipitation}}%</td>
+                <td>{{item.window_data.weather_data.precipitation*100}}%</td>
                 <td>{{item.window_data.weather_data.pressure}}</td>
                 <td>{{item.window_data.weather_data.humidity}}%</td>
                 <td>{{item.window_data.weather_data.wind_speed}}</td>
