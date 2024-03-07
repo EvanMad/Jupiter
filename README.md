@@ -1,6 +1,8 @@
 # Jupiter Weather Simulation Tool
 This tool was built to test our rocket in various real weather conditions to determine optimal launch windows based on upcoming weather forecasts.
 
+![image](https://github.com/EvanMad/Jupiter/assets/51198364/be95207f-02ab-4eb9-a565-e02ef545f239)
+
 ## Disclaimer
 This tool was built over the course of about 4 days, and so as a result is far from my best programming or software structuring. It is purely a prototpe and was built to get a demo working in a few days.
 
